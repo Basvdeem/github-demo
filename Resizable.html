@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Resizable</title>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+<!-- Voor styles-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+    
+<!-- voor functies zoals draggable en resizable-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    
+    <style>
+        .bluebox{
+            background-color: aqua;
+            height: 100px;
+            width: auto;
+        }
+        .redbox{
+            background-color: red;
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: green;
+            height: 100px;
+            width: auto;
+        }
+    </style>
+</head>
+    
+    <body>
+        
+        <div class="bluebox" id="blue">
+            <p>This is a blue box</p>
+        </div>
+        <div class="redbox" id="red">
+            <p>This is a red box</p>
+        </div>   
+        <div class="greenbox" id="green">
+            <p>This is a green box</p>
+        </div>
+        <div class="ui-state-error" style="height: 100px;margin-top: 20px"><p>Error message</p></div>
+        
+        <script>
+            //$(function(){} makes sure code only runs when site is fully loaded
+            $(function(){                
+                $("#green").resizable({
+                    maxHeight:200,
+                    minHeight:100,
+                    maxWidth:500,
+                    minWidth:200
+                });
+              });
+            
+        </script>
+        
+        
+    </body>
+    
+</html>
